@@ -5,7 +5,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 
 # Đọc dataset
-data = pd.read_csv("../data/creditcard.csv")
+data = pd.read_csv("data/creditcard.csv")
 
 # Input (dữ liệu để học)
 X = data.drop(columns=['Class'])
