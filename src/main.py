@@ -34,6 +34,14 @@ y_pred = model.predict(X_test)
 acc = accuracy_score(y_test, y_pred)
 
 print("Accuracy:", acc)
+# Đếm số giao dịch gian lận
+fraud_count = data['Class'].sum()
+
+# Đếm tổng giao dịch
+total_transactions = len(data)
+
+print("Total Transactions:", total_transactions)
+print("Fraud Transactions:", fraud_count)
 import matplotlib.pyplot as plt
 
 # Vẽ biểu đồ
