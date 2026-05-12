@@ -45,11 +45,36 @@ print("Fraud Transactions:", fraud_count)
 import matplotlib.pyplot as plt
 
 # Vẽ biểu đồ
+# Chia dữ liệu
+normal = data[data['Class'] == 0]
+fraud = data[data['Class'] == 1]
+
+# Vẽ giao dịch bình thường
 plt.scatter(
-    data['Time'],
-    data['Amount'],
-    c=data['Class']
+    normal['Time'],
+    normal['Amount'],
+    label='Normal Transaction',
+    alpha=0.5
 )
+
+# Vẽ giao dịch bất thường
+plt.scatter(
+    fraud['Time'],
+    fraud['Amount'],
+    label='Fraud Transaction',
+    alpha=0.8
+)
+
+# Tiêu đề và chú thích
+plt.xlabel("Time")
+plt.ylabel("Amount")
+plt.title("Fraud Detection in Accounting Transactions")
+
+# Hiện chú thích
+plt.legend()
+
+# Hiện biểu đồ
+plt.show()
 
 # Tên trục
 plt.xlabel("Time")
