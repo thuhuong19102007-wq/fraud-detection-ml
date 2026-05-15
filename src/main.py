@@ -76,6 +76,7 @@ plt.legend()
 # Hiện biểu đồ
 plt.show()
 
+
 # Tên trục
 plt.xlabel("Time")
 plt.ylabel("Amount")
